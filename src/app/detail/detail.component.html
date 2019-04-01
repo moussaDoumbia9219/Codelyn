@@ -1,0 +1,16 @@
+<div class="container text-center">
+  <button class="btn btn-default " routerLink="/"> Back</button>
+  <div class="card" style="width: 18rem;" *ngIf="photoElement">
+    <img class="card-img-top" src="{{photoElement.thumbnailUrl}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{photoElement.title}}</h5>
+      <p class="card-text">{{photoElement.url}}.
+      </p>
+      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+  </div>
+  <div class="danger" *ngIf="!photoElement">
+    Chargement
+  </div>
+
+</div>

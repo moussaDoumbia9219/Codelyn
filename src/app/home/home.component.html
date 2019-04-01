@@ -1,0 +1,22 @@
+<div class="container">
+  <ul class="list-group" *ngIf="dataPhotos?.length;">
+    <li class="list-group-item" *ngFor="let photo of dataPhotos" routerLink="/detail/{{photo.id}}"
+      style="cursor: pointer">
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="{{photo.thumbnailUrl}}" class="img-responsive" alt="">
+        </div>
+        <div class="col-sm-8">
+          <h3>{{photo.title}}</h3>
+          <p>text sample</p>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+  <div *ngIf="!dataPhotos.length">
+    Aucune données
+  </div>
+
+
+</div>
